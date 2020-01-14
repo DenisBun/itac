@@ -1,4 +1,4 @@
-import { leftClick, rightClick } from '../js/buttonHandlers.js';
+import { showSuperheroBasedOnDirection } from '../js/buttonHandlers.js';
 
 
 let start;
@@ -13,11 +13,5 @@ window.addEventListener('touchstart', function(event) {
 
 window.addEventListener('touchend', function(event) {
     end = event.changedTouches[0].clientX;
-    if( start > end ) {
-        console.log('swipe right')
-        rightClick();
-    } else {
-        console.log('swipe left')
-        leftClick();
-    }
+    showSuperheroBasedOnDirection(start > end ? 'right' : 'left');
 });

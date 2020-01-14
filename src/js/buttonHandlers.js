@@ -2,7 +2,7 @@ import { setVisibleDataset } from "./utils/setVisibleDataset.js";
 import { showFirstHero } from "./superheroes/showFirstHero.js";
 import { showLastHero } from "./superheroes/showLastHero.js";
 
-const hideCurrentVisibleSuperhero = direction => {
+export const showSuperheroBasedOnDirection = direction => {
   const currentVisibleSuperhero = document.querySelector(
     '.superhero_container[data-visible="true"]'
   );
@@ -23,15 +23,9 @@ const toggleVisibleSuperhero = (currentVisibleId, direction) => {
   }
 };
 
-export function leftClick() {
-  hideCurrentVisibleSuperhero("left");
-}
 
-export function rightClick() {
-  hideCurrentVisibleSuperhero("right");
-}
 
 export const addButtonHandlers = () => {
-  document.querySelector(".left_button").addEventListener("click", leftClick);
-  document.querySelector(".right_button").addEventListener("click", rightClick);
+  document.querySelector(".left_button").addEventListener("click", (e) => showSuperheroBasedOnDirection(e.currentTarget.className.split('_')[0]));
+  document.querySelector(".right_button").addEventListener("click", (e) => showSuperheroBasedOnDirection(e.currentTarget.className.split('_')[0]));
 };

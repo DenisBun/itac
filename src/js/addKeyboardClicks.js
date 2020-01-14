@@ -1,9 +1,9 @@
-import { leftClick, rightClick } from "./buttonHandlers.js";
+import { showSuperheroBasedOnDirection } from "./buttonHandlers.js";
 
 window.addEventListener("keydown", e => {
   if (e.code === "ArrowRight") {
-    rightClick();
+    showSuperheroBasedOnDirection('right');
   } else if (e.code === "ArrowLeft") {
-    leftClick();
+    showSuperheroBasedOnDirection('left');
   }
 });
