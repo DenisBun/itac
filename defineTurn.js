@@ -1,0 +1,1 @@
+export const defineTurn = (previousTurn = 'X') => previousTurn === 'X' ? 'O' : 'X';
