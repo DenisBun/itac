@@ -23,3 +23,7 @@
 .disabled {
     cursor: not-allowed;
 }
+
+.winner_cell {
+    color: red;
+}
