@@ -1,0 +1,52 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+input {
+    width: 250px;
+    height: 20px;
+    border: 3px solid goldenrod;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    background-color: yellowgreen;
+    font-size: 20px;
+}
+
+.toDosWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.toDoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.toDo {
+    text-align: center;
+    vertical-align: center;
+    background-color: green;
+    margin: 10px;
+    min-width: 250px;
+    min-height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
